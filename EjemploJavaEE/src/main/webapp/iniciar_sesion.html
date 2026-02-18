@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>Nébula music</title>
+        <meta charset="UTF-8">
+    </head>
+
+    <body>
+        <nav>
+            <a href="./index.html"><img src="./imgs/nebula-03.svg" height="80px"></a>
+            <a href="./about.html">Nosotros</a>
+            <a href="./registro.html">Registrate</a>
+            <a href="./iniciar_sesion.html">Iniciar Sesión</a>
+            <a href="./comunidad.html">Comunidad</a>
+        </nav>
+
+        <main>
+            <section>
+                <form name="form_nuevo_usuario" 
+                      enctype="application/x-www-form-urlencoded" 
+                      action="Auth" 
+                      method="POST">
+
+                    <div name="titulo">
+                        <h3>Login</h3>
+                        <span>Completa la información y envía tus datos</span>
+                    </div>
+
+                    <div name="correo">
+                        <label for="txt_correo">Correo</label>
+                        <input id="txt_correo" name="txt_correo" type="email" minlength="10" maxlength="100" required>
+                        <span>Tu correo para recibir notificaciones</span>
+                    </div>
+
+                    <div name="password">
+                        <label for="txt_password">Contraseña</label>
+                        <input id="txt_password" name="txt_password" type="password" minlength="10" required>
+                        <span>Tu contraseña para acceder a tu cuenta</span>
+                    </div>
+
+                    <div name="options">
+                        <button type="submit">Login</button>
+                        <button type="reset">Cancelar</button>
+                    </div>
+                </form>
+            </section>
+        </main>
+
+        <footer>
+            <div>
+                Síguenos en nuestras redes.
+                <div>
+                    <a href="www.instagram.com" target="_blank">Instagram</a>
+                    <a href="www.facebook.com" target="_blank">Facebook</a>
+                    <a href="www.tiktok.com" target="_blank">Tiktok</a>
+                </div>
+            </div>
+
+            Copyright Nébula 2025.
+        </footer>
+
+    </body>
+
+</html>

@@ -1,0 +1,4 @@
+com\mycompany\ejemplojavaee\JakartaRestConfiguration.class
+com\mycompany\ejemplojavaee\servlets\Usuarios.class
+com\mycompany\ejemplojavaee\servlets\Auth.class
+com\mycompany\ejemplojavaee\resources\JakartaEE10Resource.class

@@ -1,0 +1,19 @@
+img#img_nav {
+    height:80px;
+}
+
+h3,p{
+    font-size: 4em;
+}
+
+section>article{
+    background-color: aqua;
+}
+
+article h3{
+    color: brown;
+}
+
+p#ejemplo~p{
+    color: purple;
+}
