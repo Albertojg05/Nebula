@@ -1,0 +1,43 @@
+@import url(./global.css);
+
+#seccion-titulo{
+    background-image: var(--bg-image);
+    height: 100px;
+}
+
+#seccion-titulo > h2{
+    color: white;
+    text-align: center;
+}
+
+input[type="text"]:hover{
+    background-color: yellow;
+}
+
+div.input-form > label,span,input{
+    display: block;
+}
+
+form > div{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: 1px solid black;
+    padding: 10px;
+}
+
+#seccion-estado > label,input{
+    display: inline;
+}
+
+form > div > span{
+    font-size: 10px;
+}
+
+header > a, nav{
+    display: inline;
+}
+
+div#seccion-form{
+    background-color: rgb(86, 103, 237);
+    border-radius: 10px;
+}

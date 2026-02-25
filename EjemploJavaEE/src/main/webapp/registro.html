@@ -1,110 +1,87 @@
 <!DOCTYPE html>
 <html>
 
-    <head>
-        <title>Nébula music</title>
-        <meta charset="UTF-8">
-    </head>
+<head>
+    <title>Nébula</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./estilos/styles.css" />
+</head>
 
-    <body>
+<body>
+    <header>
+        <a href="./index.html">
+            <img src="./imgs/nebula-03.png" alt="logo nébula" width="100" />
+        </a>
         <nav>
-            <a href="./index.html"><img src="./imgs/nebula-03.svg" height="80px"></a>
-            <a href="./about.html">Nosotros</a>
+            <a href="./nosotros.html">Nosotros</a>
             <a href="./registro.html">Registrate</a>
-            <a href="./iniciar_sesion.html">Iniciar Sesión</a>
             <a href="./comunidad.html">Comunidad</a>
         </nav>
+    </header>
+    <main>
+        <div id="seccion-titulo">
+            <h2>Registro de usuarios</h2>
+        </div>
 
-        <header>
-            <h1>Registro de usuarios</h1>
-        </header>
-
-        <main>
-            <section>
-                <form name="form_nuevo_usuario" 
-                      enctype="application/x-www-form-urlencoded" 
-                      action="Usuarios" 
-                      method="POST">
-
-                    <div name="titulo">
-                        <h3>Nuevo usuario</h3>
-                        <span>Completa la información y envía tus datos</span>
-                    </div>
-
-                    <div name="nombre">
-                        <label for="txt_name">Nombre</label>
-                        <input id="txt_name" name="txt_name" type="text" minlength="10" maxlength="100" required>
-                        <span>Tu nombre completo</span>
-                    </div>
-
-                    <div name="correo">
-                        <label for="txt_correo">Correo</label>
-                        <input id="txt_correo" name="txt_correo" type="email" minlength="10" maxlength="100" required>
-                        <span>Tu correo para recibir notificaciones</span>
-                    </div>
-
-                    <div name="fechaNacimiento">
-                        <label for="txt_fechaNacimiento">Fecha de nacimiento</label>
-                        <input type="date" id="txt_dob" name="txt_fechaNacimiento" required>
-                        <span>Tu fecha de nacimiento</span>
-                    </div>
-
-                    <div name="password">
-                        <label for="txt_password">Contraseña</label>
-                        <input id="txt_password" name="txt_password" type="password" minlength="10" required>
-                        <span>Tu contraseña para acceder a tu cuenta</span>
-                    </div>
-
-                    <div name="pseudonimo">
-                        <label for="txt_pseudonimo">Pseudónimo</label>
-                        <input id="txt_pseudonimo" name="txt_pseudonimo" type="text" required>
-                        <span>Tu pseudónimo para identificarte por otros usuarios</span>
-                    </div>
-
-                    <div name="estado">
-                        <label for="rad_estado">Estado</label>
-                        <div name="radios_estado">
-                            <input type="radio" value="activo" id="rad_activo" name="rad_estado">
-                            <label for="rad_activo">Activo</label>
-                            <input type="radio" value="inactivo" id="rad_inactivo" name="rad_estado">
-                            <label for="rad_inactivo">Inactivo</label>
-                            <input type="radio" value="pendiente" id="rad_pendiente" name="rad_estado">
-                            <label for="rad_pendiente">Pendiente</label>
-                        </div>
-                    </div>
-
-                    <div name="cuenta">
-                        <label for="sel_cuenta">Cuenta</label>
-                        <select id="sel_cuenta" name="sel_cuenta">
-                            <option value="" selected disabled hidden>-Selecciona-</option>
-                            <option value="gratis">Gratis</option>
-                            <option value="basica">Básica</option>
-                            <option value="premium">Premium</option>
-                        </select>
-                        <span>Tu tipo de cuenta para desbloquear características</span>
-                    </div>
-
-                    <div name="options">
-                        <button type="submit">Registrar</button>
-                        <button type="reset">Cancelar</button>
-                    </div>
-                </form>
-            </section>
-        </main>
-
-        <footer>
-            <div>
-                Síguenos en nuestras redes.
-                <div>
-                    <a href="www.instagram.com" target="_blank">Instagram</a>
-                    <a href="www.facebook.com" target="_blank">Facebook</a>
-                    <a href="www.tiktok.com" target="_blank">Tiktok</a>
+        <div id="seccion-form">
+            <form action="/usuarios" method="post">
+                <div id="seccion-titulo-form">
+                    <h4>Nuevo usuario</h4>
+                    <label>Completa la información y envía los datos</label>
                 </div>
-            </div>
-
-            Copyright Nébula 2025.
-        </footer>
-
-    </body>
+                <div id="seccion-nombre" class="input-form">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" id="nombre" name="nombre" minlength="10" maxlength="100"
+                        placeholder="Escribe tu nombre" />
+                    <span>Tu nombre completo</span>
+                </div>
+                <div id="seccion-correo" class="input-form">
+                    <label for="correo">Correo</label>
+                    <input type="email" id="correo" name="correo" required maxlength="200"
+                        placeholder="Escribe tu correo" />
+                    <span>Tu correo para recibir notificaciones</span>
+                </div>
+                <div id="seccion-password" class="input-form">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" required maxlength="100" />
+                    <span>La contraseña para iniciar sesión</span>
+                </div>
+                <div id="seccion-pseudonimo" class="input-form">
+                    <label for="pseudonimo">Pseudónimo</label>
+                    <input type="text" id="pseudonimo" name="pseudonimo" pattern="[A-Z]{5}[0-9]{1}" />
+                    <span>Tu pseudónimo para identificarte con otros usuarios</span>
+                </div>
+                <div id="seccion-estado">
+                    <label>Estado</label>
+                    <input type="radio" value="activo" id="estado_activo" name="estado" required>Activo
+                    <input type="radio" value="pendiente" id="estado_pendiente" name="estado">Pendiente
+                </div>
+                <div id="seccion-cuenta">
+                    <label for="cuenta">Cuenta</label>
+                    <select id="cuenta" name="cuenta" required>
+                        <option value="">-Selecciona-</option>
+                        <option value="basica">Básica</option>
+                        <option value="estandar">Estándar</option>
+                        <option value="premium">Premium</option>
+                    </select>
+                </div>
+                <div id="seccion-fecha-nacimiento">
+                    <label for="fecha-nacimiento">Fecha nacimiento</label>
+                    <input type="date" id="fecha-nacimiento" name="fecha-nacimiento" required />
+                    <span>Tu fecha de nacimiento para recibir promociones</span>
+                </div>
+                <div id="seccion-terminos">
+                    <label for="terminos">Aceptar términos y condiciones</label>
+                    <input type="checkbox" id="terminos" name="terminos" required />
+                </div>
+                <div id="seccion-opciones">
+                    <input type="submit" value="Registrar" />
+                    <input type="reset" value="Cancelar" />
+                </div>
+            </form>
+        </div>
+    </main>
+</body>
 
 </html>
